@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_ghi8IC84EeOEj_CLl4tnhg" name="tpTAA_sportTracker">
+  <packageImport xmi:id="_ghi8IS84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8Ii84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8Iy84EeOEj_CLl4tnhg" key="uuid" value="_WUfj4BFYEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <importedPackage href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#/"/>
+  </packageImport>
+  <packageImport xmi:id="_ghi8JC84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8JS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8Ji84EeOEj_CLl4tnhg" key="uuid" value="_WUgK8BFYEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <importedPackage href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#/"/>
+  </packageImport>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8Jy84EeOEj_CLl4tnhg" name="User">
+    <eAnnotations xmi:id="_ghi8KC84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8KS84EeOEj_CLl4tnhg" key="uuid" value="_aqG5QBFYEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8Ki84EeOEj_CLl4tnhg" name="name">
+      <eAnnotations xmi:id="_ghi8Ky84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8LC84EeOEj_CLl4tnhg" key="uuid" value="_hlRUkBFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8LS84EeOEj_CLl4tnhg" name="urname">
+      <eAnnotations xmi:id="_ghi8Li84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Ly84EeOEj_CLl4tnhg" key="uuid" value="_lEHaABFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8MC84EeOEj_CLl4tnhg" name="birthDate">
+      <eAnnotations xmi:id="_ghi8MS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Mi84EeOEj_CLl4tnhg" key="uuid" value="_m7-TgBFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8My84EeOEj_CLl4tnhg" name="weight">
+      <eAnnotations xmi:id="_ghi8NC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8NS84EeOEj_CLl4tnhg" key="uuid" value="_sV0tEBFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Real"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Ni84EeOEj_CLl4tnhg" name="gender" type="_ghi8Sy84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8Ny84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8OC84EeOEj_CLl4tnhg" key="uuid" value="_xrjboBFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8OS84EeOEj_CLl4tnhg" name="pseudo">
+      <eAnnotations xmi:id="_ghi8Oi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Oy84EeOEj_CLl4tnhg" key="uuid" value="_4Fs0kBFYEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8PC84EeOEj_CLl4tnhg" name="compteFaceBook">
+      <eAnnotations xmi:id="_ghi8PS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Pi84EeOEj_CLl4tnhg" key="uuid" value="_WqMRoBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Py84EeOEj_CLl4tnhg" name="compteTwitter">
+      <eAnnotations xmi:id="_ghi8QC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8QS84EeOEj_CLl4tnhg" key="uuid" value="_bRl6kBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Qi84EeOEj_CLl4tnhg" name="mailAdress">
+      <eAnnotations xmi:id="_ghi8Qy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8RC84EeOEj_CLl4tnhg" key="uuid" value="_mkGJkBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8RS84EeOEj_CLl4tnhg" name="avatar">
+      <eAnnotations xmi:id="_ghi8Ri84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Ry84EeOEj_CLl4tnhg" key="uuid" value="_205ekBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8SC84EeOEj_CLl4tnhg" name="group">
+      <eAnnotations xmi:id="_ghi8SS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Si84EeOEj_CLl4tnhg" key="uuid" value="_2gRyEBFcEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Enumeration" xmi:id="_ghi8Sy84EeOEj_CLl4tnhg" name="GenderEnum">
+    <eAnnotations xmi:id="_ghi8TC84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8TS84EeOEj_CLl4tnhg" key="uuid" value="__zK2kBFYEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedLiteral xmi:id="_ghi8Ti84EeOEj_CLl4tnhg" name="MAN">
+      <eAnnotations xmi:id="_ghi8Ty84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8UC84EeOEj_CLl4tnhg" key="uuid" value="_Cjj6kBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_ghi8US84EeOEj_CLl4tnhg" name="WOMAN">
+      <eAnnotations xmi:id="_ghi8Ui84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Uy84EeOEj_CLl4tnhg" key="uuid" value="_E9wFEBFZEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedLiteral>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8VC84EeOEj_CLl4tnhg" name="Workout">
+    <eAnnotations xmi:id="_ghi8VS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8Vi84EeOEj_CLl4tnhg" key="uuid" value="_Af8AgBFaEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8Vy84EeOEj_CLl4tnhg" name="duration">
+      <eAnnotations xmi:id="_ghi8WC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8WS84EeOEj_CLl4tnhg" key="uuid" value="_ES77kBFbEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Real"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Wi84EeOEj_CLl4tnhg" name="date">
+      <eAnnotations xmi:id="_ghi8Wy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8XC84EeOEj_CLl4tnhg" key="uuid" value="__hESkBFbEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8XS84EeOEj_CLl4tnhg" name="departureTime">
+      <eAnnotations xmi:id="_ghi8Xi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Xy84EeOEj_CLl4tnhg" key="uuid" value="_B6foEBFcEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8YC84EeOEj_CLl4tnhg" name="finishTime">
+      <eAnnotations xmi:id="_ghi8YS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8Yi84EeOEj_CLl4tnhg" key="uuid" value="_ggHtkBFcEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Yy84EeOEj_CLl4tnhg" name="typeSport" type="_ghi8eS84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8ZC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8ZS84EeOEj_CLl4tnhg" key="uuid" value="_FdOAkBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8Zi84EeOEj_CLl4tnhg" name="comments">
+      <eAnnotations xmi:id="_ghi8Zy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8aC84EeOEj_CLl4tnhg" key="uuid" value="_7fr5EBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8aS84EeOEj_CLl4tnhg" name="id">
+      <eAnnotations xmi:id="_ghi8ai84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8ay84EeOEj_CLl4tnhg" key="uuid" value="_jZrlkBFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi8bC84EeOEj_CLl4tnhg" name="User_Workout" memberEnd="_ghi8dC84EeOEj_CLl4tnhg _ghi8by84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi8by84EeOEj_CLl4tnhg _ghi8dC84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8bS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8bi84EeOEj_CLl4tnhg" key="uuid" value="_nhZX8BFcEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi8by84EeOEj_CLl4tnhg" name="workout" type="_ghi8VC84EeOEj_CLl4tnhg" association="_ghi8bC84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8cC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8cS84EeOEj_CLl4tnhg" key="uuid" value="_nhRcIBFcEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8ci84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8cy84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi8dC84EeOEj_CLl4tnhg" name="user" type="_ghi8Jy84EeOEj_CLl4tnhg" association="_ghi8bC84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8dS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8di84EeOEj_CLl4tnhg" key="uuid" value="_nhSDMBFcEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8dy84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8eC84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Enumeration" xmi:id="_ghi8eS84EeOEj_CLl4tnhg" name="Sport">
+    <eAnnotations xmi:id="_ghi8ei84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8ey84EeOEj_CLl4tnhg" key="uuid" value="_ZN8OgBFeEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedLiteral xmi:id="_ghi8fC84EeOEj_CLl4tnhg" name="RUNNING">
+      <eAnnotations xmi:id="_ghi8fS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8fi84EeOEj_CLl4tnhg" key="uuid" value="_bBhsABFeEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_ghi8fy84EeOEj_CLl4tnhg" name="CYCLE">
+      <eAnnotations xmi:id="_ghi8gC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8gS84EeOEj_CLl4tnhg" key="uuid" value="_cxwTgBFeEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_ghi8gi84EeOEj_CLl4tnhg" name="SWIMMING">
+      <eAnnotations xmi:id="_ghi8gy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8hC84EeOEj_CLl4tnhg" key="uuid" value="_h4PFIBFeEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedLiteral>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8hS84EeOEj_CLl4tnhg" name="Meteo">
+    <eAnnotations xmi:id="_ghi8hi84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8hy84EeOEj_CLl4tnhg" key="uuid" value="_PwFXgBFfEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8iC84EeOEj_CLl4tnhg" name="weather">
+      <eAnnotations xmi:id="_ghi8iS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8ii84EeOEj_CLl4tnhg" key="uuid" value="_ffLGkBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8iy84EeOEj_CLl4tnhg" name="temperature">
+      <eAnnotations xmi:id="_ghi8jC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8jS84EeOEj_CLl4tnhg" key="uuid" value="_itA7kBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8ji84EeOEj_CLl4tnhg" name="humidity">
+      <eAnnotations xmi:id="_ghi8jy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8kC84EeOEj_CLl4tnhg" key="uuid" value="_mr6aEBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi8kS84EeOEj_CLl4tnhg" name="Workout_Meteo" memberEnd="_ghi8mS84EeOEj_CLl4tnhg _ghi8lC84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi8lC84EeOEj_CLl4tnhg _ghi8mS84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8ki84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8ky84EeOEj_CLl4tnhg" key="uuid" value="_ZrepoRFfEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi8lC84EeOEj_CLl4tnhg" name="meteo" type="_ghi8hS84EeOEj_CLl4tnhg" association="_ghi8kS84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8lS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8li84EeOEj_CLl4tnhg" key="uuid" value="_ZreCkBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8ly84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8mC84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi8mS84EeOEj_CLl4tnhg" name="workout" type="_ghi8VC84EeOEj_CLl4tnhg" association="_ghi8kS84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8mi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8my84EeOEj_CLl4tnhg" key="uuid" value="_ZrepoBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8nC84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8nS84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8ni84EeOEj_CLl4tnhg" name="Parcours">
+    <eAnnotations xmi:id="_ghi8ny84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8oC84EeOEj_CLl4tnhg" key="uuid" value="_1f3WkBFfEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8oS84EeOEj_CLl4tnhg" name="ptDepart">
+      <eAnnotations xmi:id="_ghi8oi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8oy84EeOEj_CLl4tnhg" key="uuid" value="_9mp3gBFfEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8pC84EeOEj_CLl4tnhg" name="GPSPoint">
+    <eAnnotations xmi:id="_ghi8pS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8pi84EeOEj_CLl4tnhg" key="uuid" value="_DvuukBFgEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8py84EeOEj_CLl4tnhg" name="longtitude">
+      <eAnnotations xmi:id="_ghi8qC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8qS84EeOEj_CLl4tnhg" key="uuid" value="_HqJVsBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Real"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8qi84EeOEj_CLl4tnhg" name="latitude">
+      <eAnnotations xmi:id="_ghi8qy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8rC84EeOEj_CLl4tnhg" key="uuid" value="_LHOgkBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Real"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi8rS84EeOEj_CLl4tnhg" name="time">
+      <eAnnotations xmi:id="_ghi8ri84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8ry84EeOEj_CLl4tnhg" key="uuid" value="_RNO1gBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi8sC84EeOEj_CLl4tnhg" name="Parcours_GPSPoint" memberEnd="_ghi8sy84EeOEj_CLl4tnhg _ghi8uC84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi8sy84EeOEj_CLl4tnhg _ghi8uC84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8sS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8si84EeOEj_CLl4tnhg" key="uuid" value="_aX4nMBFgEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi8sy84EeOEj_CLl4tnhg" name="gPSPoint" type="_ghi8pC84EeOEj_CLl4tnhg" association="_ghi8sC84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8tC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8tS84EeOEj_CLl4tnhg" key="uuid" value="_aX3ZEBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8ti84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8ty84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi8uC84EeOEj_CLl4tnhg" name="parcours" type="_ghi8ni84EeOEj_CLl4tnhg" association="_ghi8sC84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8uS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8ui84EeOEj_CLl4tnhg" key="uuid" value="_aX4AIBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8uy84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8vC84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi8vS84EeOEj_CLl4tnhg" name="Parcours_Workout" memberEnd="_ghi8wC84EeOEj_CLl4tnhg _ghi8xS84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi8wC84EeOEj_CLl4tnhg _ghi8xS84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8vi84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8vy84EeOEj_CLl4tnhg" key="uuid" value="_iAKnMBFgEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi8wC84EeOEj_CLl4tnhg" name="workout" type="_ghi8VC84EeOEj_CLl4tnhg" association="_ghi8vS84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8wS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8wi84EeOEj_CLl4tnhg" key="uuid" value="_iAJZEBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8wy84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8xC84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi8xS84EeOEj_CLl4tnhg" name="parcours" type="_ghi8ni84EeOEj_CLl4tnhg" association="_ghi8vS84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8xi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8xy84EeOEj_CLl4tnhg" key="uuid" value="_iAKAIBFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8yC84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi8yS84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi8yi84EeOEj_CLl4tnhg" name="Cardio">
+    <eAnnotations xmi:id="_ghi8yy84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8zC84EeOEj_CLl4tnhg" key="uuid" value="_rxmsEBFgEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi8zS84EeOEj_CLl4tnhg" name="frequency">
+      <eAnnotations xmi:id="_ghi8zi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8zy84EeOEj_CLl4tnhg" key="uuid" value="_vps_ABFgEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi80C84EeOEj_CLl4tnhg" name="workZone">
+      <eAnnotations xmi:id="_ghi80S84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi80i84EeOEj_CLl4tnhg" key="uuid" value="_OiB-EBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi80y84EeOEj_CLl4tnhg" name="Workout_Cardio" memberEnd="_ghi81i84EeOEj_CLl4tnhg _ghi82y84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi81i84EeOEj_CLl4tnhg _ghi82y84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi81C84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi81S84EeOEj_CLl4tnhg" key="uuid" value="_Z1eBMBFhEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi81i84EeOEj_CLl4tnhg" name="cardio" type="_ghi8yi84EeOEj_CLl4tnhg" association="_ghi80y84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi81y84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi82C84EeOEj_CLl4tnhg" key="uuid" value="_Z1czEBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi82S84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi82i84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi82y84EeOEj_CLl4tnhg" name="workout" type="_ghi8VC84EeOEj_CLl4tnhg" association="_ghi80y84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi83C84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi83S84EeOEj_CLl4tnhg" key="uuid" value="_Z1daIBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi83i84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi83y84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi84C84EeOEj_CLl4tnhg" name="User_User" memberEnd="_ghi84y84EeOEj_CLl4tnhg _ghi86C84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi84y84EeOEj_CLl4tnhg _ghi86C84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi84S84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi84i84EeOEj_CLl4tnhg" key="uuid" value="_oP3OMRFhEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi84y84EeOEj_CLl4tnhg" name="user" type="_ghi8Jy84EeOEj_CLl4tnhg" association="_ghi84C84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi85C84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi85S84EeOEj_CLl4tnhg" key="uuid" value="_oP2AEBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi85i84EeOEj_CLl4tnhg" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi85y84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi86C84EeOEj_CLl4tnhg" name="user" type="_ghi8Jy84EeOEj_CLl4tnhg" isUnique="false" association="_ghi84C84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi86S84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi86i84EeOEj_CLl4tnhg" key="uuid" value="_oP3OMBFhEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi86y84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi87C84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ghi87S84EeOEj_CLl4tnhg" name="Message">
+    <eAnnotations xmi:id="_ghi87i84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi87y84EeOEj_CLl4tnhg" key="uuid" value="_HnlfABFiEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ghi88C84EeOEj_CLl4tnhg" name="sender" type="_ghi8Jy84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi88S84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi88i84EeOEj_CLl4tnhg" key="uuid" value="_LZEMkBFiEDGuOrL2zm872Q"/>
+      </eAnnotations>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi88y84EeOEj_CLl4tnhg" name="sendTime">
+      <eAnnotations xmi:id="_ghi89C84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi89S84EeOEj_CLl4tnhg" key="uuid" value="_PaZ7EBFiEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//Date"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghi89i84EeOEj_CLl4tnhg" name="message">
+      <eAnnotations xmi:id="_ghi89y84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8-C84EeOEj_CLl4tnhg" key="uuid" value="_UR_VEBFiEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_ghi8-S84EeOEj_CLl4tnhg" name="Workout_Message" memberEnd="_ghi9AS84EeOEj_CLl4tnhg _ghi8_C84EeOEj_CLl4tnhg" navigableOwnedEnd="_ghi8_C84EeOEj_CLl4tnhg _ghi9AS84EeOEj_CLl4tnhg">
+    <eAnnotations xmi:id="_ghi8-i84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi8-y84EeOEj_CLl4tnhg" key="uuid" value="_ZQiSsRFiEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_ghi8_C84EeOEj_CLl4tnhg" name="message" type="_ghi87S84EeOEj_CLl4tnhg" association="_ghi8-S84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi8_S84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi8_i84EeOEj_CLl4tnhg" key="uuid" value="_ZQhEkBFiEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi8_y84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi9AC84EeOEj_CLl4tnhg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ghi9AS84EeOEj_CLl4tnhg" name="workout" type="_ghi8VC84EeOEj_CLl4tnhg" association="_ghi8-S84EeOEj_CLl4tnhg">
+      <eAnnotations xmi:id="_ghi9Ai84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Ay84EeOEj_CLl4tnhg" key="uuid" value="_ZQiSsBFiEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghi9BC84EeOEj_CLl4tnhg" value="*"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ghi9BS84EeOEj_CLl4tnhg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Interface" xmi:id="_ghi9Bi84EeOEj_CLl4tnhg" name="UserServices">
+    <eAnnotations xmi:id="_ghi9By84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi9CC84EeOEj_CLl4tnhg" key="uuid" value="_OzBVgBFjEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedOperation xmi:id="_ghi9CS84EeOEj_CLl4tnhg" name="createUser">
+      <eAnnotations xmi:id="_ghi9Ci84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Cy84EeOEj_CLl4tnhg" key="uuid" value="_ZjenYBFjEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9DC84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9DS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Di84EeOEj_CLl4tnhg" key="uuid" value="_ZjenYRFjEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Dy84EeOEj_CLl4tnhg" name="deleteUser">
+      <eAnnotations xmi:id="_ghi9EC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9ES84EeOEj_CLl4tnhg" key="uuid" value="_dBowURFjEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Ei84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Ey84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9FC84EeOEj_CLl4tnhg" key="uuid" value="_dBpXYBFjEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9FS84EeOEj_CLl4tnhg" name="updateUser">
+      <eAnnotations xmi:id="_ghi9Fi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Fy84EeOEj_CLl4tnhg" key="uuid" value="_hraX0BFjEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9GC84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9GS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Gi84EeOEj_CLl4tnhg" key="uuid" value="_hra-4BFjEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Gy84EeOEj_CLl4tnhg" name="getUserByName">
+      <eAnnotations xmi:id="_ghi9HC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9HS84EeOEj_CLl4tnhg" key="uuid" value="_8fL8UBFjEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Hi84EeOEj_CLl4tnhg" name="returnParameter" type="_ghi8Jy84EeOEj_CLl4tnhg" direction="return">
+        <eAnnotations xmi:id="_ghi9Hy84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9IC84EeOEj_CLl4tnhg" key="uuid" value="_8fMjYBFjEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9IS84EeOEj_CLl4tnhg" name="addFriend">
+      <eAnnotations xmi:id="_ghi9Ii84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Iy84EeOEj_CLl4tnhg" key="uuid" value="_-t2zUBFjEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9JC84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9JS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Ji84EeOEj_CLl4tnhg" key="uuid" value="_-t3aYBFjEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Jy84EeOEj_CLl4tnhg" name="deleteFriend">
+      <eAnnotations xmi:id="_ghi9KC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9KS84EeOEj_CLl4tnhg" key="uuid" value="_A4thUBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Ki84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Ky84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9LC84EeOEj_CLl4tnhg" key="uuid" value="_A4uIYBFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9LS84EeOEj_CLl4tnhg" name="getFriends">
+      <eAnnotations xmi:id="_ghi9Li84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Ly84EeOEj_CLl4tnhg" key="uuid" value="_C2I3UBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9MC84EeOEj_CLl4tnhg" name="returnParameter" type="_ghi8Jy84EeOEj_CLl4tnhg" direction="return">
+        <eAnnotations xmi:id="_ghi9MS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Mi84EeOEj_CLl4tnhg" key="uuid" value="_C2I3URFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9My84EeOEj_CLl4tnhg" name="getFriendByName">
+      <eAnnotations xmi:id="_ghi9NC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9NS84EeOEj_CLl4tnhg" key="uuid" value="_E27DUBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Ni84EeOEj_CLl4tnhg" name="returnParameter" type="_ghi8Jy84EeOEj_CLl4tnhg" direction="return">
+        <eAnnotations xmi:id="_ghi9Ny84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9OC84EeOEj_CLl4tnhg" key="uuid" value="_E27qYBFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Enumeration" xmi:id="_ghi9OS84EeOEj_CLl4tnhg" name="toto">
+    <eAnnotations xmi:id="_ghi9Oi84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi9Oy84EeOEj_CLl4tnhg" key="uuid" value="_ZGIHkBFkEDGuOrL2zm872Q"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Interface" xmi:id="_ghi9PC84EeOEj_CLl4tnhg" name="WorkoutServices">
+    <eAnnotations xmi:id="_ghi9PS84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi9Pi84EeOEj_CLl4tnhg" key="uuid" value="_vdFigBFkEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedOperation xmi:id="_ghi9Py84EeOEj_CLl4tnhg" name="createWorkout">
+      <eAnnotations xmi:id="_ghi9QC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9QS84EeOEj_CLl4tnhg" key="uuid" value="_x2QZUBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Qi84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Qy84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9RC84EeOEj_CLl4tnhg" key="uuid" value="_x2RAYBFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9RS84EeOEj_CLl4tnhg" name="deleteWorkout">
+      <eAnnotations xmi:id="_ghi9Ri84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Ry84EeOEj_CLl4tnhg" key="uuid" value="_1V360RFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9SC84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9SS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Si84EeOEj_CLl4tnhg" key="uuid" value="_1V4h4BFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Sy84EeOEj_CLl4tnhg" name="updateWorkout">
+      <eAnnotations xmi:id="_ghi9TC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9TS84EeOEj_CLl4tnhg" key="uuid" value="_5TjRUBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Ti84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Ty84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9UC84EeOEj_CLl4tnhg" key="uuid" value="_5TjRURFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9US84EeOEj_CLl4tnhg" name="getWorkoutsByDate">
+      <eAnnotations xmi:id="_ghi9Ui84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Uy84EeOEj_CLl4tnhg" key="uuid" value="_7dfZUBFkEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9VC84EeOEj_CLl4tnhg" name="returnParameter" type="_ghi8VC84EeOEj_CLl4tnhg" direction="return">
+        <eAnnotations xmi:id="_ghi9VS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Vi84EeOEj_CLl4tnhg" key="uuid" value="_7dgAYBFkEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Vy84EeOEj_CLl4tnhg" name="getWorkoutsBetweenDates">
+      <eAnnotations xmi:id="_ghi9WC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9WS84EeOEj_CLl4tnhg" key="uuid" value="_BIWDURFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Wi84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Wy84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9XC84EeOEj_CLl4tnhg" key="uuid" value="_BIWqYBFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9XS84EeOEj_CLl4tnhg" name="addParticipant">
+      <eAnnotations xmi:id="_ghi9Xi84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9Xy84EeOEj_CLl4tnhg" key="uuid" value="_JxecURFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9YC84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9YS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9Yi84EeOEj_CLl4tnhg" key="uuid" value="_JxfDYBFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9Yy84EeOEj_CLl4tnhg" name="removeParticipant">
+      <eAnnotations xmi:id="_ghi9ZC84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9ZS84EeOEj_CLl4tnhg" key="uuid" value="_Podd0RFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9Zi84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9Zy84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9aC84EeOEj_CLl4tnhg" key="uuid" value="_PoeE4BFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9aS84EeOEj_CLl4tnhg" name="getWorkoutById">
+      <eAnnotations xmi:id="_ghi9ai84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9ay84EeOEj_CLl4tnhg" key="uuid" value="_suk4YBFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9bC84EeOEj_CLl4tnhg" name="returnParameter" type="_ghi8VC84EeOEj_CLl4tnhg" direction="return">
+        <eAnnotations xmi:id="_ghi9bS84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9bi84EeOEj_CLl4tnhg" key="uuid" value="_suk4YRFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Interface" xmi:id="_ghi9by84EeOEj_CLl4tnhg" name="PublishServices">
+    <eAnnotations xmi:id="_ghi9cC84EeOEj_CLl4tnhg" source="genmymodel">
+      <details xmi:id="_ghi9cS84EeOEj_CLl4tnhg" key="uuid" value="_SOlykBFlEDGuOrL2zm872Q"/>
+    </eAnnotations>
+    <ownedOperation xmi:id="_ghi9ci84EeOEj_CLl4tnhg" name="publishOnTwitteroperation">
+      <eAnnotations xmi:id="_ghi9cy84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9dC84EeOEj_CLl4tnhg" key="uuid" value="_V09cUBFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9dS84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9di84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9dy84EeOEj_CLl4tnhg" key="uuid" value="_V09cURFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ghi9eC84EeOEj_CLl4tnhg" name="publishOnFaceBook">
+      <eAnnotations xmi:id="_ghi9eS84EeOEj_CLl4tnhg" source="genmymodel">
+        <details xmi:id="_ghi9ei84EeOEj_CLl4tnhg" key="uuid" value="_YBeXMRFlEDGuOrL2zm872Q"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_ghi9ey84EeOEj_CLl4tnhg" name="returnParameter" direction="return">
+        <eAnnotations xmi:id="_ghi9fC84EeOEj_CLl4tnhg" source="genmymodel">
+          <details xmi:id="_ghi9fS84EeOEj_CLl4tnhg" key="uuid" value="_YBeXMhFlEDGuOrL2zm872Q"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>
