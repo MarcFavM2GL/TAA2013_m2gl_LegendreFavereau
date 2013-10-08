@@ -3,6 +3,13 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -10,7 +17,7 @@ import java.util.Date;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class Message
 {
 	/**
@@ -20,7 +27,7 @@ public class Message
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToOne
+	@OneToOne
 	protected User sender;
 	/**
 	 * <!-- begin-user-doc -->
@@ -29,8 +36,8 @@ public class Message
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(javax.persistence.TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date sendTime;
 	/**
 	 * <!-- begin-user-doc -->
@@ -39,7 +46,7 @@ public class Message
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String message;
 	/**
 	 * <!-- begin-user-doc -->
@@ -48,7 +55,7 @@ public class Message
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToMany(mappedBy = "message")
+	@ManyToMany(mappedBy = "message")
 	protected Set<Workout> workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -56,8 +63,8 @@ public class Message
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->

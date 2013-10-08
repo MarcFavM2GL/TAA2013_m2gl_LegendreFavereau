@@ -1,9 +1,21 @@
 package tpTAA_sportTracker.domain;
+import java.util.Date;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
-import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
@@ -12,7 +24,7 @@ import java.util.Date;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class User
 {
 	/**
@@ -22,7 +34,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String name;
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,7 +43,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String surname;
 	/**
 	 * <!-- begin-user-doc -->
@@ -40,8 +52,8 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date birthDate;
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,7 +62,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected double weight;
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,8 +71,8 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Enumerated(javax.persistence.EnumType.STRING)
-	@javax.persistence.Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
 	protected GenderEnum gender;
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +81,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String pseudo;
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +90,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String compteFaceBook;
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,7 +99,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String compteTwitter;
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +108,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String mailAdress;
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,7 +117,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String avatar;
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +126,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String group;
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +135,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToMany(mappedBy = "user")
+	@ManyToMany(mappedBy = "user")
 	protected Set<Workout> workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,8 +144,8 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToOne
-	@javax.persistence.JoinColumn(nullable = false)
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected User user;
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,7 +154,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToMany
+	@OneToMany
 	protected List<User> amis;
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,8 +162,8 @@ public class User
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->

@@ -1,7 +1,19 @@
 package tpTAA_sportTracker.domain;
-import java.util.Set;
-import java.util.HashSet;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
@@ -10,7 +22,7 @@ import java.util.Date;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class Workout
 {
 	/**
@@ -20,7 +32,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected double duration;
 	/**
 	 * <!-- begin-user-doc -->
@@ -29,8 +41,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date date;
 	/**
 	 * <!-- begin-user-doc -->
@@ -39,8 +51,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date departureTime;
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,8 +61,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date finishTime;
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,8 +71,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Enumerated(javax.persistence.EnumType.STRING)
-	@javax.persistence.Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
 	protected Sport typeSport;
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +81,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String comments;
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,8 +90,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected Long id;
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,7 +100,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToMany
+	@ManyToMany
 	protected Set<User> user;
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,7 +109,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToMany
+	@ManyToMany
 	protected Set<Message> message;
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,7 +118,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToOne
+	@OneToOne
 	protected Cardio cardio;
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,7 +127,7 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToOne
+	@OneToOne
 	protected Parcours parcours;
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,8 +136,8 @@ public class Workout
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToOne
-	@javax.persistence.JoinColumn(nullable = false)
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected Meteo meteo;
 	/**
 	 * <!-- begin-user-doc -->

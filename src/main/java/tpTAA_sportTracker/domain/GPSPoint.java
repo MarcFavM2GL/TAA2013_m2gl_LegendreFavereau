@@ -1,6 +1,13 @@
 package tpTAA_sportTracker.domain;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -8,7 +15,7 @@ import java.util.Date;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class GPSPoint
 {
 	/**
@@ -18,7 +25,7 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected double longtitude;
 	/**
 	 * <!-- begin-user-doc -->
@@ -27,7 +34,7 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected double latitude;
 	/**
 	 * <!-- begin-user-doc -->
@@ -36,8 +43,8 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@javax.persistence.Temporal(javax.persistence.TemporalType.DATE)
-	@javax.persistence.Column(nullable = false)
+	@Temporal(javax.persistence.TemporalType.DATE)
+	@Column(nullable = false)
 	protected Date time;
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,8 +53,8 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@javax.persistence.ManyToOne
-	@javax.persistence.JoinColumn(nullable = false)
+	@ManyToOne
+	@JoinColumn(nullable = false)
 	protected Parcours parcours;
 	/**
 	 * <!-- begin-user-doc -->
@@ -55,8 +62,8 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->

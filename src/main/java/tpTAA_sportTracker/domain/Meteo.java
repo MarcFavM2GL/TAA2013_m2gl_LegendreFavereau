@@ -1,6 +1,11 @@
 package tpTAA_sportTracker.domain;
-import java.util.Set;
 import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 /**
@@ -9,7 +14,7 @@ import java.util.HashSet;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class Meteo
 {
 	/**
@@ -19,7 +24,7 @@ public class Meteo
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String weather;
 	/**
 	 * <!-- begin-user-doc -->
@@ -28,7 +33,7 @@ public class Meteo
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String temperature;
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,7 +42,7 @@ public class Meteo
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String humidity;
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,7 +51,7 @@ public class Meteo
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToMany(mappedBy = "meteo")
+	@OneToMany(mappedBy = "meteo")
 	protected Set<Workout> workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,8 +59,8 @@ public class Meteo
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->

@@ -1,6 +1,12 @@
 package tpTAA_sportTracker.domain;
-import java.util.Set;
 import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 
 /**
@@ -9,7 +15,7 @@ import java.util.HashSet;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class Parcours
 {
 	/**
@@ -19,7 +25,7 @@ public class Parcours
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String ptDepart;
 	/**
 	 * <!-- begin-user-doc -->
@@ -28,7 +34,7 @@ public class Parcours
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToMany
+	@OneToMany
 	protected Set<GPSPoint> gPSPoint;
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,7 +43,7 @@ public class Parcours
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToOne(mappedBy = "parcours")
+	@OneToOne(mappedBy = "parcours")
 	protected Workout workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,8 +51,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->

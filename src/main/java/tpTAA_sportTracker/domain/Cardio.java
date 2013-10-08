@@ -1,5 +1,10 @@
 package tpTAA_sportTracker.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -7,7 +12,7 @@ package tpTAA_sportTracker.domain;
  * @generated
  */
 
-@javax.persistence.Entity
+@Entity
 public class Cardio
 {
 	/**
@@ -17,7 +22,7 @@ public class Cardio
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String frequency;
 	/**
 	 * <!-- begin-user-doc -->
@@ -26,7 +31,7 @@ public class Cardio
 	 * @ordered
 	 */
 	
-	@javax.persistence.Column(nullable = false)
+	@Column(nullable = false)
 	protected String workZone;
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,7 +40,7 @@ public class Cardio
 	 * @ordered
 	 */
 	
-	@javax.persistence.OneToOne(mappedBy = "cardio")
+	@OneToOne(mappedBy = "cardio")
 	protected Workout workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -43,8 +48,8 @@ public class Cardio
 	 * @generated
 	 * @ordered
 	 */
-	@javax.persistence.Id
-	@javax.persistence.Column(nullable = false)
+	@Id
+	@Column(nullable = false)
 	protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->
