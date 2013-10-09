@@ -1,11 +1,8 @@
-package tpTAA_sportTracker.domain;
-import java.util.HashSet;
-import java.util.Set;
+package classesServeur;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 
@@ -16,7 +13,7 @@ import javax.persistence.OneToOne;
  */
 
 @Entity
-public class Parcours
+public class Cardio
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -26,7 +23,7 @@ public class Parcours
 	 */
 	
 	@Column(nullable = false)
-	protected String ptDepart;
+	protected String frequency;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -34,8 +31,8 @@ public class Parcours
 	 * @ordered
 	 */
 	
-	@OneToMany
-	protected Set<GPSPoint> gPSPoint;
+	@Column(nullable = false)
+	protected String workZone;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -43,7 +40,7 @@ public class Parcours
 	 * @ordered
 	 */
 	
-	@OneToOne(mappedBy = "parcours")
+	@OneToOne(mappedBy = "cardio")
 	protected Workout workout;
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,7 +56,7 @@ public class Parcours
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public Parcours(){
+	public Cardio(){
 		super();
 	}
 
@@ -76,7 +73,7 @@ public class Parcours
 					Workout oldworkout = this.workout;
 					this.workout = myWorkout;
 					if (oldworkout != null)
-						oldworkout.unsetParcours();
+						oldworkout.unsetCardio();
 				}
 			}
 		}	
@@ -88,8 +85,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public String getPtDepart() {
-		return this.ptDepart;	
+	public String getFrequency() {
+		return this.frequency;	
 	}
 	
 	/**
@@ -98,11 +95,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public Set<GPSPoint> getGPSPoint() {
-		if(this.gPSPoint == null) {
-				this.gPSPoint = new HashSet<GPSPoint>();
-		}
-		return (Set<GPSPoint>) this.gPSPoint;	
+	public String getWorkZone() {
+		return this.workZone;	
 	}
 	
 	/**
@@ -131,13 +125,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public void addAllGPSPoint(Set<GPSPoint> newGPSPoint) {
-		if (this.gPSPoint == null) {
-			this.gPSPoint = new HashSet<GPSPoint>();
-		}
-		for (GPSPoint tmp : newGPSPoint)
-			tmp.setParcours(this);
-			
+	public void setFrequency(String myFrequency) {
+		this.frequency = myFrequency;	
 	}
 	
 	/**
@@ -146,37 +135,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public void removeAllGPSPoint(Set<GPSPoint> newGPSPoint) {
-		if(this.gPSPoint == null) {
-			return;
-		}
-		
-		this.gPSPoint.removeAll(newGPSPoint);	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void setPtDepart(String myPtDepart) {
-		this.ptDepart = myPtDepart;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void addGPSPoint(GPSPoint newGPSPoint) {
-		if(this.gPSPoint == null) {
-			this.gPSPoint = new HashSet<GPSPoint>();
-		}
-		
-		if (this.gPSPoint.add(newGPSPoint))
-			newGPSPoint.basicSetParcours(this);	
+	public void setWorkZone(String myWorkZone) {
+		this.workZone = myWorkZone;	
 	}
 	
 	/**
@@ -187,7 +147,7 @@ public class Parcours
 	 */
 	public void setWorkout(Workout myWorkout) {
 		this.basicSetWorkout(myWorkout);
-		myWorkout.basicSetParcours(this);
+		myWorkout.basicSetCardio(this);
 			
 	}
 	
@@ -197,8 +157,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public void unsetPtDepart() {
-		this.ptDepart = "";	
+	public void unsetFrequency() {
+		this.frequency = "";	
 	}
 	
 	/**
@@ -207,13 +167,8 @@ public class Parcours
 	 * @generated
 	 * @ordered
 	 */
-	public void removeGPSPoint(GPSPoint oldGPSPoint) {
-		if(this.gPSPoint == null)
-			return;
-		
-		if (this.gPSPoint.remove(oldGPSPoint))
-			oldGPSPoint.unsetParcours();
-			
+	public void unsetWorkZone() {
+		this.workZone = "";	
 	}
 	
 	/**
@@ -227,7 +182,7 @@ public class Parcours
 			return;
 		Workout oldworkout = this.workout;
 		this.workout = null;
-		oldworkout.unsetParcours();	
+		oldworkout.unsetCardio();	
 	}
 	
 }

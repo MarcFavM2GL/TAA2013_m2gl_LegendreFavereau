@@ -1,11 +1,13 @@
-package tpTAA_sportTracker.domain;
+package classesServeur;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 
 
@@ -16,7 +18,7 @@ import javax.persistence.Temporal;
  */
 
 @Entity
-public class GPSPoint
+public class Message
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -25,17 +27,8 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
-	protected double longtitude;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Column(nullable = false)
-	protected double latitude;
+	@OneToOne
+	protected User sender;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -45,7 +38,7 @@ public class GPSPoint
 	
 	@Temporal(javax.persistence.TemporalType.DATE)
 	@Column(nullable = false)
-	protected Date time;
+	protected Date sendTime;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -53,9 +46,17 @@ public class GPSPoint
 	 * @ordered
 	 */
 	
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	protected Parcours parcours;
+	@Column(nullable = false)
+	protected String message;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	
+	@ManyToMany(mappedBy = "message")
+	protected Set<Workout> workout;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -70,7 +71,7 @@ public class GPSPoint
 	 * <!--  end-user-doc  -->
 	 * @generated
 	 */
-	public GPSPoint(){
+	public Message(){
 		super();
 	}
 
@@ -80,17 +81,8 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public void basicSetParcours(Parcours myParcours) {
-		if (this.parcours != myParcours) {
-			if (myParcours != null){
-				if (this.parcours != myParcours) {
-					Parcours oldparcours = this.parcours;
-					this.parcours = myParcours;
-					if (oldparcours != null)
-						oldparcours.removeGPSPoint(this);
-				}
-			}
-		}	
+	public User getSender() {
+		return this.sender;	
 	}
 	
 	/**
@@ -99,8 +91,8 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public double getLongtitude() {
-		return this.longtitude;	
+	public Date getSendTime() {
+		return this.sendTime;	
 	}
 	
 	/**
@@ -109,8 +101,8 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public double getLatitude() {
-		return this.latitude;	
+	public String getMessage() {
+		return this.message;	
 	}
 	
 	/**
@@ -119,18 +111,11 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public Date getTime() {
-		return this.time;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public Parcours getParcours() {
-		return this.parcours;	
+	public Set<Workout> getWorkout() {
+		if(this.workout == null) {
+				this.workout = new HashSet<Workout>();
+		}
+		return (Set<Workout>) this.workout;	
 	}
 	
 	/**
@@ -149,8 +134,13 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public void setLongtitude(double myLongtitude) {
-		this.longtitude = myLongtitude;	
+	public void addAllWorkout(Set<Workout> newWorkout) {
+		if (this.workout == null) {
+			this.workout = new HashSet<Workout>();
+		}
+		for (Workout tmp : newWorkout)
+			tmp.addMessage(this);
+			
 	}
 	
 	/**
@@ -159,73 +149,102 @@ public class GPSPoint
 	 * @generated
 	 * @ordered
 	 */
-	public void setLatitude(double myLatitude) {
-		this.latitude = myLatitude;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void setTime(Date myTime) {
-		this.time = myTime;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void setParcours(Parcours myParcours) {
-		this.basicSetParcours(myParcours);
-		myParcours.addGPSPoint(this);	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void unsetLongtitude() {
-		this.longtitude = 0.0;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void unsetLatitude() {
-		this.latitude = 0.0;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void unsetTime() {
-		this.time = new Date();	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void unsetParcours() {
-		if (this.parcours == null)
+	public void removeAllWorkout(Set<Workout> newWorkout) {
+		if(this.workout == null) {
 			return;
-		Parcours oldparcours = this.parcours;
-		this.parcours = null;
-		oldparcours.removeGPSPoint(this);	
+		}
+		
+		this.workout.removeAll(newWorkout);	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void setSender(User mySender) {
+		this.sender = mySender;	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void setSendTime(Date mySendTime) {
+		this.sendTime = mySendTime;	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void setMessage(String myMessage) {
+		this.message = myMessage;	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void addWorkout(Workout newWorkout) {
+		if(this.workout == null) {
+			this.workout = new HashSet<Workout>();
+		}
+		
+		if (this.workout.add(newWorkout))
+			newWorkout.addMessage(this);	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void unsetSender() {
+		this.sender = new User();	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void unsetSendTime() {
+		this.sendTime = new Date();	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void unsetMessage() {
+		this.message = "";	
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!--  end-user-doc  -->
+	 * @generated
+	 * @ordered
+	 */
+	public void removeWorkout(Workout oldWorkout) {
+		if(this.workout == null)
+			return;
+		
+		if (this.workout.remove(oldWorkout))
+			oldWorkout.removeMessage(this);
+			
 	}
 	
 }

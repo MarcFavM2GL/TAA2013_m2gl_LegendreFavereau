@@ -1,4 +1,6 @@
-package tpTAA_sportTracker.domain;
+package interfacesWebServ;
+
+import classesServeur.User;
 
 
 
@@ -8,7 +10,7 @@ package tpTAA_sportTracker.domain;
  * @generated
  */
 
-public  interface WorkoutServices 
+public  interface UserServices 
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -17,7 +19,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void addParticipant() ;
+	public void addFriend() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -25,7 +27,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void createWorkout() ;
+	public void createUser() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -33,7 +35,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void deleteWorkout() ;
+	public void deleteFriend() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -41,7 +43,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public Workout getWorkoutById() ;
+	public void deleteUser() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -49,7 +51,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void getWorkoutsBetweenDates() ;
+	public User getFriendByName() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -57,7 +59,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public Workout getWorkoutsByDate() ;
+	public User getFriends() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -65,7 +67,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void removeParticipant() ;
+	public User getUserByName() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -73,7 +75,7 @@ public  interface WorkoutServices
 	 * @ordered
 	 */
 	
-	public void updateWorkout() ;
+	public void updateUser() ;
 	
 }
 

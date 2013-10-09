@@ -1,4 +1,8 @@
-package tpTAA_sportTracker.domain;
+package interfacesWebServ;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 
 
@@ -17,7 +21,9 @@ public  interface PublishServices
 	 * @ordered
 	 */
 	
-	public void publishOnFaceBook() ;
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String publishOnFaceBook() ;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -25,7 +31,9 @@ public  interface PublishServices
 	 * @ordered
 	 */
 	
-	public void publishOnTwitteroperation() ;
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String publishOnTwitteroperation() ;
 	
 }
 

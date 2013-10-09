@@ -1,4 +1,4 @@
-package tpTAA_sportTracker.domain;
+package classesServeur;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedList;

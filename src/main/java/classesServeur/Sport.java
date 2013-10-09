@@ -1,4 +1,4 @@
-package tpTAA_sportTracker.domain;
+package classesServeur;
 
 /**
  * <!-- begin-user-doc -->
