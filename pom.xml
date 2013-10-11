@@ -5,55 +5,63 @@
 	<artifactId>fr.istic.TAA</artifactId>
 	<name>app-sport</name>
 	<groupId>app-sport</groupId>
-	<!--
-		* Start of user code for project
-	  -->
-	<packaging>jar</packaging>
+	<!-- * Start of user code for project -->
+	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.7</java-version>
-		<hibernate-version>3.5.3-Final</hibernate-version>
-		<hsqldb-version>2.2.9</hsqldb-version>
-		<jersey-version>1.17.1</jersey-version>
+		<hibernate-em-version>4.1.7.Final</hibernate-em-version>
+		<hibernate-core-version>3.5.3-Final</hibernate-core-version>
+		<hibernate-mvn-version>3.0</hibernate-mvn-version>
+		<hsqldb-version>2.3.0</hsqldb-version>
+		<jersey-version>1.8</jersey-version>
+		<mysql-version>5.1.26</mysql-version>
+		<maven-version>3.1</maven-version>
+		<tomcat-version>2.1</tomcat-version>
+
 	</properties>
-	<!--
-		* End of user code for project
-	  -->
+	<!-- * End of user code for project -->
 	<build>
 		<plugins>
-			<!--
-				* Start of user code for plugins
-		  	-->
+			<!-- * Start of user code for plugins -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>${tomcat-version}</version>
+				<configuration>
+					<path>/</path>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${maven-version}</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
 					<compilerArgument>-Xlint:all</compilerArgument>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
 			<plugin>
-        		<groupId>org.codehaus.mojo</groupId>
-        		<artifactId>hibernate3-maven-plugin</artifactId>
-        		<version>2.2</version>
-        		<configuration>
-          			<components>
-            			<component>
-              				<name>hbm2ddl</name>
-              				<implementation>jpaconfiguration</implementation>
-            			</component>
-          			</components>
-          			<componentProperties>
-        	  			<outputfilename>schema.ddl</outputfilename>
-         	 			<format>true</format>
-       	 			</componentProperties>
-        		</configuration>
-        		<dependencies>	
-            		<dependency>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>hibernate3-maven-plugin</artifactId>
+				<version>${hibernate-mvn-version}</version>
+				<configuration>
+					<components>
+						<component>
+							<name>hbm2ddl</name>
+							<implementation>jpaconfiguration</implementation>
+						</component>
+					</components>
+					<componentProperties>
+						<outputfilename>schema.ddl</outputfilename>
+						<format>true</format>
+					</componentProperties>
+				</configuration>
+				<dependencies>
+					<dependency>
 						<groupId>org.hsqldb</groupId>
 						<artifactId>hsqldb</artifactId>
 						<version>${hsqldb-version}</version>
@@ -61,74 +69,62 @@
 					<dependency>
 						<groupId>org.hibernate</groupId>
 						<artifactId>hibernate-entitymanager</artifactId>
-						<version>${hibernate-version}</version>
+						<version>${hibernate-em-version}</version>
 					</dependency>
 					<dependency>
 						<groupId>org.hibernate</groupId>
 						<artifactId>hibernate-core</artifactId>
-						<version>${hibernate-version}</version>
+						<version>${hibernate-core-version}</version>
 					</dependency>
-        		</dependencies>
-      		</plugin>
-			<!--
-				* End of user code for plugins
-		  	-->		
+				</dependencies>
+			</plugin>
+			<!-- * End of user code for plugins -->
 		</plugins>
-		<!--
-			* Start of user code for build
-		  -->
-		<!--
-			* End of user code for build
-		  -->
+		<!-- * Start of user code for build -->
+		<!-- * End of user code for build -->
 	</build>
 	<dependencies>
-		<!--
-			* Start of user code for dependencies
-		  -->
+		<!-- * Start of user code for dependencies -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-version}</version>
+			<version>${hibernate-em-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate-version}</version>
+			<version>${hibernate-core-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>${hsqldb-version}</version>
 		</dependency>
-		
 		<dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>${jersey-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-json</artifactId>
-            <version>${jersey-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.1.7.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>2.2.8</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.21</version>
-        </dependency>
-        
-		<!--
-			* End of user code for dependencies
-		  -->
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${jersey-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate-em-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
+		</dependency>
+		<!-- * End of user code for dependencies -->
 	</dependencies>
 </project>
