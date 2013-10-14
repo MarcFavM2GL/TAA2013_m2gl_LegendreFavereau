@@ -50,7 +50,9 @@ public class Cardio
 	 */
 	@Id
 	@Column(nullable = false)
-	protected final Long id = 0L;
+	protected Long id = 0L;
+
+	//protected final Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
