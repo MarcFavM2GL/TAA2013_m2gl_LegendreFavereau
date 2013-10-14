@@ -20,9 +20,7 @@ public  interface PublishServices
 	 * @generated
 	 * @ordered
 	 */
-	
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
+
 	public String publishOnFaceBook() ;
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,9 +29,7 @@ public  interface PublishServices
 	 * @ordered
 	 */
 	
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String publishOnTwitteroperation() ;
+	//public String publishOnTwitteroperation() ;
 	
 }
 

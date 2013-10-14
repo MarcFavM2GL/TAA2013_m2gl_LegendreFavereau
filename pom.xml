@@ -30,6 +30,7 @@
 				<version>${tomcat-version}</version>
 				<configuration>
 					<path>/</path>
+<!-- 					<warSourceDirectory>${project.build.outputDirectory}/${artifactId}-${version}</warSourceDirectory> -->
 				</configuration>
 			</plugin>
 			<plugin>
