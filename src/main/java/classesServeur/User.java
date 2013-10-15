@@ -43,6 +43,23 @@ public class User {
 	public User() {
 	}
 
+	public User(String name, String surname, Date birthDate, float weight,
+			GenderEnum gender, String pseudo, String cmptFB, String cmptTW,
+			String mailAdr, String avatar, String group) {
+
+		this.name = name;
+		this.surname = surname;
+		this.birthDate = birthDate;
+		this.weight = weight;
+		this.gender = gender;
+		this.pseudo = pseudo;
+		this.compteFaceBook = cmptFB;
+		this.compteTwitter = cmptTW;
+		this.mailAdress = mailAdr;
+		this.avatar = avatar;
+		this.group = group;
+	}
+
 	public void basicRemoveAmis(User oldAmis) {
 		if (this.amis == null)
 			return;
@@ -114,7 +131,7 @@ public class User {
 		return this.avatar;
 	}
 
-	@Column(name="CGROUP")
+	@Column(name = "CGROUP")
 	public String getGroup() {
 		return this.group;
 	}
@@ -184,7 +201,7 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public void setAmis(User myUser) {
 		this.amis.add(myUser);
 	}
@@ -204,11 +221,11 @@ public class User {
 	public void setWeight(double myWeight) {
 		this.weight = myWeight;
 	}
-	
+
 	public void setWorkout(Workout myWorkout) {
 		this.workout.add(myWorkout);
 	}
-	
+
 	public void setGender(GenderEnum myGender) {
 		this.gender = myGender;
 	}

@@ -1,81 +1,124 @@
 package interfacesWebServ;
 
+import java.util.Date;
+
+import classesServeur.GenderEnum;
 import classesServeur.User;
 
-
-
 /**
- * <!-- begin-user-doc -->
- * <!--  end-user-doc  -->
- * @generated
+ * 
+ * @author Legendre & Favereau
+ * @version 1.0.0
+ * 
+ * Interface de definition des services
+ * web associe a la gestion des utilisateurs
+ *  de l'Application  'SportTrackAppli'
+ * 
+ * Le 12/10/2013
+ * 
  */
 
 public  interface UserServices 
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
 	
-	public void addFriend() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	/** 
+	 * @see User.class
+	 * @category service web (fonction)
+	 * Ajoute un utilisateur
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String addFriend() ;
 	
-	public void createUser() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+
+	/** 
+	 * @see User.class
+	 * @category service web (fonction)
+	 * Demande la creation d'un utilisateur
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
+	 */	
+	public String createUser(	String name,
+								String surname,
+								Date birthDate,
+								float weight,
+								boolean gender,
+								String pseudo,
+								String cmptFB,
+								String cmptTW,
+								String mailAdr,
+								String avatar,
+								String group) ;
+	
+	
+	
+	/** 
+	 * @see User.class
+	 * @category service web (fonction)
+	 * Supprime un ami du compte de
+	 * l'utilisateur
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String deleteFriend() ;
 	
-	public void deleteFriend() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	/** 
+	 * @see User.class
+	 * @category service web (fonction)
+	 * Supprime un utilisateur
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String deleteUser() ;
 	
-	public void deleteUser() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	/** 
+	 * @see User.class
+	 * @category service web (fonction)
+	 * Recherche et retourne un ami
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String getFriendByName() ;
+	 
+	 
+	 /** 
+	  * @see User.class
+	  * @category service web (fonction)
+	  * retourne un amis
+	  * 
+	  * @return 	une info texte
+	  * 			pour l'instant...TODO
+	  */
+	 public String getFriends() ;
+	 
+	 
+	 /** 
+	  * @see User.class
+	  * @category service web (fonction)
+	  * Recherche et retourne un utilisateur
+	  * 
+	  *  @return 	une info texte
+	  * 			pour l'instant...TODO
+	  */
+	public String getUserByName() ;
 	
-	public User getFriendByName() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
 	
-	public User getFriends() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	public User getUserByName() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	public void updateUser() ;
+	/** 
+	  * @see User.class
+	  * @category service web (fonction)
+	  * Mise a jour de l'utilisateur
+	  * dans la base de donnee
+	  * 
+	  *  @return 	une info texte
+	  * 			pour l'instant...TODO
+	  */
+	public String updateUser() ;
 	
 }
-
