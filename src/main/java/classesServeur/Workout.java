@@ -1,162 +1,42 @@
 package classesServeur;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
-/**
- * <!-- begin-user-doc -->
- * <!--  end-user-doc  -->
- * @generated
- */
-
 @Entity
-public class Workout
-{
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Column(nullable = false)
-	protected double duration;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
-	protected Date date;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
-	protected Date departureTime;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
-	protected Date finishTime;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Enumerated(EnumType.STRING)
-	@Column(nullable = false)
-	protected Sport typeSport;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Column(nullable = false)
-	protected String comments;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@Id
-	@Column(nullable = false)
-	protected Long id;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@ManyToMany
-	protected Set<User> user;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@ManyToMany
-	protected Set<Message> message;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@OneToOne
-	protected Cardio cardio;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@OneToOne
-	protected Parcours parcours;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	protected Meteo meteo;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public Workout(){
-		super();
+public class Workout {
+
+	private double duration;
+	private Date date;
+	private Date departureTime;
+	private Date finishTime;
+	private Sport typeSport;
+	private String comments;
+	private int id;
+	private Set<User> user;
+	private Set<Message> message;
+	private Cardio cardio;
+	private Parcours parcours;
+	private Meteo meteo;
+
+	public Workout() {
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
 	public void basicSetCardio(Cardio myCardio) {
 		if (this.cardio != myCardio) {
-			if (myCardio != null){
+			if (myCardio != null) {
 				if (this.cardio != myCardio) {
 					Cardio oldcardio = this.cardio;
 					this.cardio = myCardio;
@@ -164,18 +44,12 @@ public class Workout
 						oldcardio.unsetWorkout();
 				}
 			}
-		}	
+		}
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void basicSetParcours(Parcours myParcours) {
 		if (this.parcours != myParcours) {
-			if (myParcours != null){
+			if (myParcours != null) {
 				if (this.parcours != myParcours) {
 					Parcours oldparcours = this.parcours;
 					this.parcours = myParcours;
@@ -183,18 +57,12 @@ public class Workout
 						oldparcours.unsetWorkout();
 				}
 			}
-		}	
+		}
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void basicSetMeteo(Meteo myMeteo) {
 		if (this.meteo != myMeteo) {
-			if (myMeteo != null){
+			if (myMeteo != null) {
 				if (this.meteo != myMeteo) {
 					Meteo oldmeteo = this.meteo;
 					this.meteo = myMeteo;
@@ -202,469 +70,241 @@ public class Workout
 						oldmeteo.removeWorkout(this);
 				}
 			}
-		}	
+		}
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public double getDuration() {
-		return this.duration;	
+		return this.duration;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@Temporal(TemporalType.DATE)
 	public Date getDate() {
-		return this.date;	
+		return this.date;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@Temporal(TemporalType.DATE)
 	public Date getDepartureTime() {
-		return this.departureTime;	
+		return this.departureTime;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@Temporal(TemporalType.DATE)
 	public Date getFinishTime() {
-		return this.finishTime;	
+		return this.finishTime;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@Enumerated(EnumType.STRING)
 	public Sport getTypeSport() {
-		return this.typeSport;	
+		return this.typeSport;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public String getComments() {
-		return this.comments;	
+		return this.comments;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public long getId() {
-		return this.id;	
+
+	@Id
+	@GeneratedValue
+	public int getId() {
+		return this.id;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@ManyToMany
 	public Set<User> getUser() {
-		if(this.user == null) {
-				this.user = new HashSet<User>();
+		if (this.user == null) {
+			this.user = new HashSet<User>();
 		}
-		return (Set<User>) this.user;	
+		return (Set<User>) this.user;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@ManyToMany
 	public Set<Message> getMessage() {
-		if(this.message == null) {
-				this.message = new HashSet<Message>();
+		if (this.message == null) {
+			this.message = new HashSet<Message>();
 		}
-		return (Set<Message>) this.message;	
+		return (Set<Message>) this.message;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@OneToOne
 	public Cardio getCardio() {
-		return this.cardio;	
+		return this.cardio;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@OneToOne
 	public Parcours getParcours() {
-		return this.parcours;	
+		return this.parcours;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	@ManyToOne
 	public Meteo getMeteo() {
-		return this.meteo;	
+		return this.meteo;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void addAllUser(Set<User> newUser) {
 		if (this.user == null) {
 			this.user = new HashSet<User>();
 		}
 		for (User tmp : newUser)
 			tmp.addWorkout(this);
-			
+
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void addAllMessage(Set<Message> newMessage) {
 		if (this.message == null) {
 			this.message = new HashSet<Message>();
 		}
 		for (Message tmp : newMessage)
 			tmp.addWorkout(this);
-			
+
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void removeAllUser(Set<User> newUser) {
-		if(this.user == null) {
+		if (this.user == null) {
 			return;
 		}
-		
-		this.user.removeAll(newUser);	
+
+		this.user.removeAll(newUser);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void removeAllMessage(Set<Message> newMessage) {
-		if(this.message == null) {
+		if (this.message == null) {
 			return;
 		}
-		
-		this.message.removeAll(newMessage);	
+
+		this.message.removeAll(newMessage);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setDuration(double myDuration) {
-		this.duration = myDuration;	
+		this.duration = myDuration;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setDate(Date myDate) {
-		this.date = myDate;	
+		this.date = myDate;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setDepartureTime(Date myDepartureTime) {
-		this.departureTime = myDepartureTime;	
+		this.departureTime = myDepartureTime;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setFinishTime(Date myFinishTime) {
-		this.finishTime = myFinishTime;	
+		this.finishTime = myFinishTime;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setTypeSport(Sport myTypeSport) {
-		this.typeSport = myTypeSport;	
+		this.typeSport = myTypeSport;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setComments(String myComments) {
-		this.comments = myComments;	
+		this.comments = myComments;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void setId(long myId) {
-		this.id = myId;	
+
+	public void setId(int myId) {
+		this.id = myId;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void addUser(User newUser) {
-		if(this.user == null) {
+		if (this.user == null) {
 			this.user = new HashSet<User>();
 		}
-		
+
 		if (this.user.add(newUser))
-			newUser.addWorkout(this);	
+			newUser.addWorkout(this);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void addMessage(Message newMessage) {
-		if(this.message == null) {
+		if (this.message == null) {
 			this.message = new HashSet<Message>();
 		}
-		
+
 		if (this.message.add(newMessage))
-			newMessage.addWorkout(this);	
+			newMessage.addWorkout(this);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setCardio(Cardio myCardio) {
 		this.basicSetCardio(myCardio);
 		myCardio.basicSetWorkout(this);
-			
+
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void setParcours(Parcours myParcours) {
 		this.basicSetParcours(myParcours);
 		myParcours.basicSetWorkout(this);
-			
+
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
+	public void setMessage(Message myMessage) {
+		this.message.add(myMessage);
+	}
+
+	public void setUser(User myUser) {
+		this.user.add(myUser);
+	}
+
 	public void setMeteo(Meteo myMeteo) {
 		this.basicSetMeteo(myMeteo);
-		myMeteo.addWorkout(this);	
+		myMeteo.addWorkout(this);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetDuration() {
-		this.duration = 0.0;	
+		this.duration = 0.0;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetDate() {
-		this.date = new Date();	
+		this.date = new Date();
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetDepartureTime() {
-		this.departureTime = new Date();	
+		this.departureTime = new Date();
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetFinishTime() {
-		this.finishTime = new Date();	
+		this.finishTime = new Date();
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetTypeSport() {
-		this.typeSport = Sport.RUNNING;	
+		this.typeSport = Sport.RUNNING;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetComments() {
-		this.comments = "";	
+		this.comments = "";
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	public void unsetId() {
-		this.id = 0L;	
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void removeUser(User oldUser) {
-		if(this.user == null)
+		if (this.user == null)
 			return;
-		
+
 		if (this.user.remove(oldUser))
 			oldUser.removeWorkout(this);
-			
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void removeMessage(Message oldMessage) {
-		if(this.message == null)
+		if (this.message == null)
 			return;
-		
+
 		if (this.message.remove(oldMessage))
 			oldMessage.removeWorkout(this);
-			
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetCardio() {
 		if (this.cardio == null)
 			return;
 		Cardio oldcardio = this.cardio;
 		this.cardio = null;
-		oldcardio.unsetWorkout();	
+		oldcardio.unsetWorkout();
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetParcours() {
 		if (this.parcours == null)
 			return;
 		Parcours oldparcours = this.parcours;
 		this.parcours = null;
-		oldparcours.unsetWorkout();	
+		oldparcours.unsetWorkout();
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+
 	public void unsetMeteo() {
 		if (this.meteo == null)
 			return;
 		Meteo oldmeteo = this.meteo;
 		this.meteo = null;
-		oldmeteo.removeWorkout(this);	
+		oldmeteo.removeWorkout(this);
 	}
-	
-}
 
+}

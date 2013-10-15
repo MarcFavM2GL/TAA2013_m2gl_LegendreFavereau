@@ -16,6 +16,10 @@ local.properties
 .settings/
 .loadpath
 .target/
+
+# HSQLDB
+.HSQLDB/
+
 # External tool builders
 .externalToolBuilders/
 
