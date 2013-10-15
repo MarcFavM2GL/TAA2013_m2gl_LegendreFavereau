@@ -6,7 +6,7 @@
 # -----------------------------------------------------
 
 # the value set here will override the value passed by $JAVA_HOME or the -jdkhome switch
-jdkhome="/usr/lib/jvm/java-6-openjdk-amd64/"
+jdkhome="/home/favereau/jdk1.7.0_40/"
 jargs=""
 thread_flag=""
 

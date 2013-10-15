@@ -9,11 +9,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -25,6 +27,7 @@ import javax.persistence.TemporalType;
  */
 
 @Entity
+
 public class User
 {
 	/**
@@ -53,7 +56,6 @@ public class User
 	 */
 	
 	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
 	protected Date birthDate;
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,7 +64,6 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
 	protected double weight;
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,6 @@ public class User
 	 */
 	
 	@Enumerated(EnumType.STRING)
-	@Column(nullable = false)
 	protected GenderEnum gender;
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,6 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
 	protected String pseudo;
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,7 +89,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
+	
 	protected String compteFaceBook;
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,7 +98,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
+	
 	protected String compteTwitter;
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,7 +107,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
+	
 	protected String mailAdress;
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,7 +116,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
+	
 	protected String avatar;
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +125,7 @@ public class User
 	 * @ordered
 	 */
 	
-	@Column(nullable = false)
+	@Column(name="CGROUP")
 	protected String group;
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,7 +144,6 @@ public class User
 	 */
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	protected User user;
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,9 +161,8 @@ public class User
 	 * @ordered
 	 */
 	@Id
+	@GeneratedValue
 	@Column(nullable = false)
-	//protected final Long id = 0L;
-
 	protected Long id = 0L;
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,9 +170,38 @@ public class User
 	 * @generated
 	 */
 	public User(){
-		super();
+		
 	}
 
+	
+	public User(String name,
+			String surname,
+			Date birthDate,
+			float weight,
+			GenderEnum gender,
+			String pseudo,
+			String cmptFB,
+			String cmptTW,
+			String mailAdr,
+			String avatar,
+			String group){
+		
+		
+		this.name = name;
+		this.surname = surname;
+		this.birthDate = birthDate;
+		this.weight = weight;
+		this.gender = gender;
+		this.pseudo = pseudo;
+		this.compteFaceBook = cmptFB;
+		this.compteTwitter = cmptTW;
+		this.mailAdress = mailAdr;
+		this.avatar = avatar;
+		this.group = group;
+	}
+	
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!--  end-user-doc  -->
@@ -736,4 +762,3 @@ public class User
 	}
 	
 }
-

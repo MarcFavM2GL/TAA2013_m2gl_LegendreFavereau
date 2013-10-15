@@ -5,76 +5,111 @@ import classesServeur.Workout;
 
 
 /**
- * <!-- begin-user-doc -->
- * <!--  end-user-doc  -->
- * @generated
+ * 
+ * @author Legendre & Favereau
+ * @version 1.0.0
+ * 
+ * Interface de definition des services
+ * web associe a la gestion des seances
+ *  de l'Application  'SportTrackAppli'
+ * 
+ * Le 12/10/2013
+ * 
  */
-
-public  interface WorkoutServices 
-{
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
+public  interface WorkoutServices {
 	
-	public void addParticipant() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Ajoute un participant a la seance
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String addParticipant() ;
 	
-	public void createWorkout() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Creation d'une seance
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String createWorkout() ;
 	
-	public void deleteWorkout() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Suppresion d'une seance
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String deleteWorkout() ;
 	
-	public Workout getWorkoutById() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Recherche une seance par sa 
+	 * cle de hachage
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String getWorkoutById() ;
 	
-	public void getWorkoutsBetweenDates() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
+	
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * recherche de seances
+	 * dans une periode donnee
+	 * 
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
 	 */
+	public String getWorkoutsBetweenDates() ;
 	
-	public Workout getWorkoutsByDate() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
 	
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * recherche de seances
+	 * a une date donnee
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
+	 */	
+	public String getWorkoutsByDate() ;
+	
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Supprime un participant a la seance
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
+	 */	
 	public void removeParticipant() ;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
 	
+	
+	/** 
+	 * @see Workout.class
+	 * @category service web (fonction)
+	 * Mise a jour de la seance
+	 * dans la base de donnee
+	 * 
+	 * @return 	une info texte
+	 * 			pour l'instant...TODO
+	 */	
 	public void updateWorkout() ;
 	
 }

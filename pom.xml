@@ -13,7 +13,7 @@
 		<hibernate-em-version>4.1.7.Final</hibernate-em-version>
 	
 	
-		<hsqldb-version>2.3.0</hsqldb-version>
+		<hsqldb-version>2.2.8</hsqldb-version>
 		<jersey-version>1.8</jersey-version>
 		<mysql-version>5.1.26</mysql-version>
 		<maven-version>3.1</maven-version>
