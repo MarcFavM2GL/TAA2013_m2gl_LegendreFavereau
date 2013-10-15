@@ -4,9 +4,14 @@ import java.util.Date;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+
+import org.codehaus.jettison.json.JSONObject;
+
+import java.util.*;
 
 import persistance.EMF;
 import classesServeur.GenderEnum;
@@ -25,7 +30,7 @@ public class UserServicesImpl implements UserServices {
 	}
 
 	@Override
-	@POST @Path("/createFriend")
+	@POST @Path("/createUser")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	@Produces(MediaType.APPLICATION_JSON)
 	public String createUser(	@FormParam("name")String name,
@@ -106,10 +111,36 @@ public class UserServicesImpl implements UserServices {
 		return null;
 	}
 
+	
 	@Override
-	public String getUserByName() {
-		// TODO Auto-generated method stub
-		return null;
+	@POST @Path("/getUserByName")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Produces(MediaType.APPLICATION_JSON)
+	public User getUserByName(@FormParam("name")String name) {
+		User retour = null;
+		
+		EntityManager em = EMF.createEntityManager();
+			
+		em.getTransaction().begin();
+		
+		Query maRequete = em.createQuery("select e from User as e where e.name='" + name + "'");
+		
+		
+		List result = maRequete.getResultList();
+		if(!result.isEmpty()){
+			java.util.Iterator parcour = result.iterator();
+			
+			while(parcour.hasNext()){
+				retour = (User) parcour.next();
+				System.out.println(retour.toString());
+			}
+		}
+		
+		System.out.println("retour de " + retour.getName() + " " + retour.getSurname());
+		System.out.flush();
+		
+		
+		return retour;
 	}
 
 	@Override

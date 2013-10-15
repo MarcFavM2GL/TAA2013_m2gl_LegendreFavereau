@@ -107,7 +107,7 @@ public  interface UserServices
 	  *  @return 	une info texte
 	  * 			pour l'instant...TODO
 	  */
-	public String getUserByName() ;
+	public User getUserByName(String name) ;
 	
 	
 	/** 
