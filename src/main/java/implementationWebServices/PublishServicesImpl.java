@@ -8,32 +8,30 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-
 /**
- * 
- *   @category Classe
- *   
- *   Implementation de l'interface PublishServices */
+*
+* @category Classe
+*
+* Implementation de l'interface PublishServices */
 
 @Path("/publish")
-public class PublishServicesImpl implements PublishServices{
-	
-	
+public class PublishServicesImpl implements PublishServices {
+
 	@Override
-	@GET @Path("/onFaceBook")
+	@GET
+	@Path("/onFaceBook")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String publishOnFaceBook() {
-		
-		return "I am on FaceBook !!!";
 
+		return "I am on FaceBook !!!";
 	}
 
 	@Override
-	@GET @Path("/onTwitter")
+	@GET
+	@Path("/onTwitter")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String publishOnTwitter() {
-		
+
 		return "Follow me on Twitter !!!";
 	}
-
 }
